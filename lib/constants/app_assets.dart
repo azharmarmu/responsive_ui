@@ -10,3 +10,7 @@ const String menuNotification = 'assets/icons/menu_notification.svg';
 const String menuProfile = 'assets/icons/menu_profile.svg';
 const String menuSettings = 'assets/icons/menu_setting.svg';
 
+
+const String mediaFile = 'assets/icons/media_file.svg';
+const String media = 'assets/icons/media.svg';
+

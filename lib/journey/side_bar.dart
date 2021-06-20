@@ -11,7 +11,7 @@ class SideBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: MediaQuery.of(context).size.width * 0.25,
+      width: MediaQuery.of(context).size.width * 0.20,
       color: secondaryColor,
       child: Drawer(
         child: ListView(

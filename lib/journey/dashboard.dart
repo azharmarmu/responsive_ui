@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_ui/constants/app_color.dart';
 
 import 'widgets/header.dart';
+import 'widgets/storage_details.dart';
 
 class Dashboard extends StatelessWidget {
   const Dashboard({Key? key}) : super(key: key);
@@ -19,17 +20,15 @@ class Dashboard extends StatelessWidget {
             Container(
               child: Row(
                 children: [
-                  Container(
-                    color: Colors.red,
-                    height: 600,
-                    width: MediaQuery.of(context).size.width * 0.4,
+                  Expanded(
+                    flex: 4,
+                    child: Container(
+                      color: Colors.red,
+                      height: 600,
+                    ),
                   ),
                   SizedBox(width: AppConstants.defaultPadding),
-                  Container(
-                    color: Colors.blue,
-                    height: 600,
-                    width: MediaQuery.of(context).size.width * 0.2,
-                  ),
+                  StorageDetails(),
                 ],
               ),
             ),
