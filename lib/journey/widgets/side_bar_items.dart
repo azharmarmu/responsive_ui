@@ -16,8 +16,8 @@ class SideBarItem extends StatelessWidget {
     final Color color = Colors.white60;
     return ListTile(
       leading: SizedBox(
-        width: 24,
-        height: 24,
+        width: 20,
+        height: 20,
         child: SvgPicture.asset(
           path,
           color: color,
