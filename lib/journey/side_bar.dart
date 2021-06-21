@@ -12,19 +12,19 @@ class SideBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width * 0.20,
-      color: secondaryColor,
+      color: AppConstants.secondaryColor,
       child: Drawer(
         child: ListView(
           children: [
-            DrawerHeader(child: Image.asset(logo)),
-            SideBarItem(path: menuDashboard, label: AppStrings.dashboard),
-            SideBarItem(path: menuTransaction, label: 'Transaction'),
-            SideBarItem(path: menuTask, label: 'Task'),
-            SideBarItem(path: menuDocuments, label: 'Documents'),
-            SideBarItem(path: menuStore, label: 'Store'),
-            SideBarItem(path: menuNotification, label: 'Notification'),
-            SideBarItem(path: menuProfile, label: 'Profile'),
-            SideBarItem(path: menuSettings, label: 'Settings'),
+            DrawerHeader(child: Image.asset(AppAssets.logo)),
+            SideBarItem(path: AppAssets.menuDashboard, label: AppStrings.dashboard),
+            SideBarItem(path: AppAssets.menuTransaction, label: AppStrings.transaction),
+            SideBarItem(path: AppAssets.menuTask, label: AppStrings.task),
+            SideBarItem(path: AppAssets.menuDocuments, label: AppStrings.documents),
+            SideBarItem(path: AppAssets.menuStore, label: AppStrings.store),
+            SideBarItem(path: AppAssets.menuNotification, label: AppStrings.notification),
+            SideBarItem(path: AppAssets.menuProfile, label: AppStrings.profile),
+            SideBarItem(path: AppAssets.menuSettings, label: AppStrings.settings),
           ],
         ),
       ),

@@ -15,7 +15,7 @@ class SearchBox extends StatelessWidget {
               horizontal: AppConstants.defaultPadding / 2,
             ),
             hintText: AppStrings.search,
-            fillColor: secondaryColor,
+            fillColor: AppConstants.secondaryColor,
             filled: true,
             border: OutlineInputBorder(
               borderRadius: BorderRadius.all(
@@ -25,7 +25,7 @@ class SearchBox extends StatelessWidget {
             ),
             suffixIcon: Container(
               decoration: BoxDecoration(
-                color: primaryColor,
+                color: AppConstants.primaryColor,
                 borderRadius: BorderRadius.all(
                   Radius.circular(10),
                 ),

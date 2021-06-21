@@ -13,14 +13,14 @@ class ProfileCard extends StatelessWidget {
         horizontal: AppConstants.defaultPadding,
       ),
       decoration: BoxDecoration(
-        color: secondaryColor,
+        color: AppConstants.secondaryColor,
         borderRadius: BorderRadius.all(
           Radius.circular(10),
         ),
       ),
       child: Row(
         children: [
-          Image.asset(profilePic),
+          Image.asset(AppAssets.profilePic),
           SizedBox(width: AppConstants.defaultPadding / 2),
           Text('Angelina Joli'),
           SizedBox(width: AppConstants.defaultPadding / 2),

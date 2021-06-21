@@ -20,7 +20,7 @@ class StorageDetails extends StatelessWidget {
           horizontal: AppConstants.defaultPadding,
         ),
         decoration: BoxDecoration(
-          color: secondaryColor,
+          color: AppConstants.secondaryColor,
           borderRadius: BorderRadius.all(
             Radius.circular(10),
           ),
@@ -71,26 +71,26 @@ class StorageDetails extends StatelessWidget {
             ),
             SizedBox(height: AppConstants.defaultPadding),
             StorageItems(
-              icon: media,
+              icon: AppAssets.media,
+              title: 'Documents',
+              subTitle: '1328 files',
+              storage: '135GB',
+            ),
+            StorageItems(
+              icon: AppAssets.media,
               title: 'Media files',
               subTitle: '1328 files',
               storage: '135GB',
             ),
             StorageItems(
-              icon: mediaFile,
-              title: 'Media files',
+              icon: AppAssets.media,
+              title: 'Other files',
               subTitle: '1328 files',
               storage: '135GB',
             ),
             StorageItems(
-              icon: mediaFile,
-              title: 'Media files',
-              subTitle: '1328 files',
-              storage: '135GB',
-            ),
-            StorageItems(
-              icon: mediaFile,
-              title: 'Media files',
+              icon: AppAssets.media,
+              title: 'Unknown',
               subTitle: '1328 files',
               storage: '135GB',
             ),

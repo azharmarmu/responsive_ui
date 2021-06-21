@@ -24,7 +24,7 @@ class StorageItems extends StatelessWidget {
         top: AppConstants.defaultPadding,
       ),
       decoration: BoxDecoration(
-        color: secondaryColor,
+        color: AppConstants.secondaryColor,
         borderRadius: BorderRadius.all(
           Radius.circular(10),
         ),

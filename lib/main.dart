@@ -14,13 +14,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Admin Panel',
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: bgColor,
+        scaffoldBackgroundColor: AppConstants.bgColor,
         textTheme: GoogleFonts.poppinsTextTheme(
           Theme.of(context).textTheme,
         ).apply(
           bodyColor: Colors.white,
         ),
-        canvasColor: secondaryColor,
+        canvasColor: AppConstants.secondaryColor,
       ),
       home: HomeScreen(),
     );
