@@ -1,9 +1,8 @@
-class AppAssets{
+class AppAssets {
   AppAssets._();
 
   static const String mediaFile = 'assets/icons/media_file.svg';
   static const String media = 'assets/icons/media.svg';
-
 
   static const String logo = 'assets/images/logo.png';
   static const String profilePic = 'assets/images/profile_pic.png';
@@ -15,9 +14,9 @@ class AppAssets{
   static const String menuNotification = 'assets/icons/menu_notification.svg';
   static const String menuProfile = 'assets/icons/menu_profile.svg';
   static const String menuSettings = 'assets/icons/menu_setting.svg';
+
+  static const String documents = 'assets/icons/Documents.svg';
+  static const String dropbox = 'assets/icons/drop_box.svg';
+  static const String googleDrive = 'assets/icons/google_drive.svg';
+  static const String oneDrive = 'assets/icons/one_drive.svg';
 }
-
-
-
-
-
