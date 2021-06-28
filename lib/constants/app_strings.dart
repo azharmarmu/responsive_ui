@@ -1,6 +1,7 @@
 class AppStrings {
   AppStrings._();
 
+  // Menu
   static const String dashboard = 'Dashboard';
   static const String search = 'Search';
   static const String storageDetails = 'Storage details';
@@ -11,4 +12,10 @@ class AppStrings {
   static const String notification = 'notification';
   static const String profile = 'profile';
   static const String settings = 'Settings';
+
+  //MyFilesTable
+  // Column names
+  static const String fileName = 'File Name';
+  static const String date = 'Date';
+  static const String size = 'Size';
 }

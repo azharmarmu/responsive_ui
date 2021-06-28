@@ -19,4 +19,7 @@ class AppAssets {
   static const String dropbox = 'assets/icons/drop_box.svg';
   static const String googleDrive = 'assets/icons/google_drive.svg';
   static const String oneDrive = 'assets/icons/one_drive.svg';
+
+  //fileIcon
+  static const String excleFile = 'assets/icons/excle_file.svg';
 }

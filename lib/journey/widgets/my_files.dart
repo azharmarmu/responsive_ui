@@ -18,6 +18,12 @@ class MyFilesHeader extends StatelessWidget {
           children: [
             Text('My Files'),
             ElevatedButton.icon(
+              style: TextButton.styleFrom(
+                padding: EdgeInsets.symmetric(
+                  horizontal: AppConstants.defaultPadding * 1.5,
+                  vertical: AppConstants.defaultPadding,
+                ),
+              ),
               icon: Icon(Icons.add),
               onPressed: () {},
               label: Text('Add New'),
@@ -25,19 +31,19 @@ class MyFilesHeader extends StatelessWidget {
           ],
         ),
         SizedBox(height: AppConstants.defaultPadding),
-        Container(
-          height: MediaQuery.of(context).size.height * 0.25,
-          child: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4,
-              crossAxisSpacing: AppConstants.defaultPadding,
-              mainAxisSpacing: AppConstants.defaultPadding,
-            ),
-            itemCount: myFiles.length,
-            itemBuilder: (_, index) {
-              return FileCard(file: myFiles[index]);
-            },
+        GridView.builder(
+          physics: NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 4,
+            crossAxisSpacing: AppConstants.defaultPadding,
+            mainAxisSpacing: AppConstants.defaultPadding,
+            childAspectRatio: 1,
           ),
+          itemCount: myFiles.length,
+          itemBuilder: (_, index) {
+            return FileCard(file: myFiles[index]);
+          },
         ),
       ],
     );

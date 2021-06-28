@@ -77,30 +77,30 @@ class PercentageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
-      builder: (_, constraints) {
-        final width = constraints.maxWidth;
-        print(width);
-        print(width * percentage / 100);
-
-        return Container(
-          width: constraints.maxWidth,
+    return Stack(
+      children: [
+        LayoutBuilder(
+          builder: (_, constraints) {
+            return Container(
+              width: constraints.maxWidth,
+              height: AppConstants.defaultPadding * 0.2,
+              decoration: BoxDecoration(
+                color: percentageColor.withOpacity(0.1),
+              ),
+            );
+          },
+        ),
+        Container(
+          width: percentage,
           height: AppConstants.defaultPadding * 0.2,
           decoration: BoxDecoration(
-            color: percentageColor.withOpacity(0.1),
-          ),
-          child: Container(
-            width: 0,
-            height: AppConstants.defaultPadding * 0.2,
-            decoration: BoxDecoration(
-              color: percentageColor,
-              borderRadius: BorderRadius.all(
-                Radius.circular(10),
-              ),
+            color: percentageColor,
+            borderRadius: BorderRadius.all(
+              Radius.circular(10),
             ),
           ),
-        );
-      },
+        )
+      ],
     );
   }
 }
