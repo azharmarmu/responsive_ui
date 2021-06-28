@@ -80,25 +80,50 @@ class MyFilesTable extends StatelessWidget {
 }
 
 
+
 //Asssuming we get data from APi/Backend
 List<RecentFile> recentFiles = [
   RecentFile(
-    icon: AppAssets.excleFile,
+    icon: AppAssets.xdFile,
     title: 'XD File',
     date: '01-03-2021',
     size: 3.5,
   ),
   RecentFile(
-    icon: AppAssets.excleFile,
-    title: 'Sound File',
+    icon: AppAssets.figmaFile,
+    title: 'Figma File',
     date: '05-04-2021',
     size: 6.5,
   ),
   RecentFile(
-    icon: AppAssets.excleFile,
-    title: 'Excel File',
+    icon: AppAssets.documents,
+    title: 'Documents',
     date: '25-02-2021',
     size: 34.5,
+  ),
+  RecentFile(
+    icon: AppAssets.soundFile,
+    title: 'Sound File',
+    date: '25-02-2021',
+    size: 24.5,
+  ),
+  RecentFile(
+    icon: AppAssets.mediaFile,
+    title: 'Media File',
+    date: '25-01-2021',
+    size: 35.5,
+  ),
+  RecentFile(
+    icon: AppAssets.pdfFile,
+    title: 'Sales PDF',
+    date: '30-03-2021',
+    size: 40.5,
+  ),
+  RecentFile(
+    icon: AppAssets.excleFile,
+    title: 'Excel File',
+    date: '25-05-2021',
+    size: 17.5,
   ),
 ];
 

@@ -12,6 +12,9 @@ class AppStrings {
   static const String notification = 'notification';
   static const String profile = 'profile';
   static const String settings = 'Settings';
+  static const String googleDrive = 'Google Drive';
+  static const String oneDrive = 'One Drive';
+  static const String dropBox = 'Drop Box';
 
   //MyFilesTable
   // Column names

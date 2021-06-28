@@ -16,10 +16,14 @@ class AppAssets {
   static const String menuSettings = 'assets/icons/menu_setting.svg';
 
   static const String documents = 'assets/icons/Documents.svg';
-  static const String dropbox = 'assets/icons/drop_box.svg';
+  static const String dropBox = 'assets/icons/drop_box.svg';
   static const String googleDrive = 'assets/icons/google_drive.svg';
   static const String oneDrive = 'assets/icons/one_drive.svg';
 
   //fileIcon
   static const String excleFile = 'assets/icons/excle_file.svg';
+  static const String pdfFile = 'assets/icons/pdf_file.svg';
+  static const String figmaFile = 'assets/icons/Figma_file.svg';
+  static const String soundFile = 'assets/icons/sound_file.svg';
+  static const String xdFile = 'assets/icons/xd_file.svg';
 }
