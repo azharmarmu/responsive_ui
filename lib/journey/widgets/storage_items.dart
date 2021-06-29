@@ -40,14 +40,23 @@ class StorageItems extends StatelessWidget {
         title: Text(
           title,
           style: textTheme.bodyText1,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
         subtitle: Text(
           subTitle,
-          style: textTheme.bodyText2?.copyWith(color: Colors.white60),
+          style: textTheme.caption?.copyWith(
+            fontSize: 12,
+            color: Colors.white60,
+          ),
+          maxLines: 1,
+          overflow: TextOverflow.fade,
         ),
         trailing: Text(
           storage,
-          style: textTheme.bodyText1,
+          style: textTheme.bodyText1?.copyWith(
+            fontSize: 12,
+          ),
         ),
       ),
     );

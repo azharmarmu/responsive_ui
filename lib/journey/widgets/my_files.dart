@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_ui/constants/app_assets.dart';
 import 'package:responsive_ui/constants/app_color.dart';
 import 'package:responsive_ui/constants/app_strings.dart';
+import 'package:responsive_ui/responsive_layout.dart';
 
 import 'file_card.dart';
 
@@ -31,21 +32,35 @@ class MyFilesHeader extends StatelessWidget {
           ],
         ),
         SizedBox(height: AppConstants.defaultPadding),
-        GridView.builder(
-          physics: NeverScrollableScrollPhysics(),
-          shrinkWrap: true,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 4,
-            crossAxisSpacing: AppConstants.defaultPadding,
-            mainAxisSpacing: AppConstants.defaultPadding,
-            childAspectRatio: 1,
-          ),
-          itemCount: myFiles.length,
-          itemBuilder: (_, index) {
-            return FileCard(file: myFiles[index]);
-          },
+        ResponsiveLayout(
+          mobile: FileGridView(crossAxisCount: 2),
+          desktop: FileGridView(),
         ),
       ],
+    );
+  }
+}
+
+class FileGridView extends StatelessWidget {
+  final int crossAxisCount;
+
+  const FileGridView({Key? key, this.crossAxisCount: 4}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+      physics: NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: crossAxisCount,
+        crossAxisSpacing: AppConstants.defaultPadding,
+        mainAxisSpacing: AppConstants.defaultPadding,
+        childAspectRatio: 1,
+      ),
+      itemCount: myFiles.length,
+      itemBuilder: (_, index) {
+        return FileCard(file: myFiles[index]);
+      },
     );
   }
 }

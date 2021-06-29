@@ -7,8 +7,7 @@ class SearchBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 300,
+    return Expanded(
       child: TextField(
         decoration: InputDecoration(
             contentPadding: EdgeInsets.symmetric(

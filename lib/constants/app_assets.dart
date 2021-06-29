@@ -22,6 +22,7 @@ class AppAssets {
 
   //fileIcon
   static const String excleFile = 'assets/icons/excle_file.svg';
+  static const String docFile = 'assets/icons/doc_file.svg';
   static const String pdfFile = 'assets/icons/pdf_file.svg';
   static const String figmaFile = 'assets/icons/Figma_file.svg';
   static const String soundFile = 'assets/icons/sound_file.svg';

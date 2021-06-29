@@ -4,26 +4,6 @@ import 'package:responsive_ui/constants/app_assets.dart';
 import 'package:responsive_ui/constants/app_color.dart';
 import 'package:responsive_ui/constants/app_strings.dart';
 
-import 'my_files.dart';
-
-class MyFileContainer extends StatelessWidget {
-  const MyFileContainer({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      flex: 4,
-      child: Column(
-        children: [
-          MyFilesHeader(),
-          SizedBox(height: AppConstants.defaultPadding),
-          MyFilesTable(),
-        ],
-      ),
-    );
-  }
-}
-
 class MyFilesTable extends StatelessWidget {
   const MyFilesTable({Key? key}) : super(key: key);
 
@@ -44,7 +24,7 @@ class MyFilesTable extends StatelessWidget {
             'Recent Files',
             style: Theme.of(context).textTheme.bodyText1,
           ),
-          SizedBox(height: AppConstants.defaultPadding/2),
+          SizedBox(height: AppConstants.defaultPadding / 2),
           SizedBox(
             width: double.infinity,
             child: DataTable(
@@ -60,7 +40,11 @@ class MyFilesTable extends StatelessWidget {
                     DataCell(
                       Row(
                         children: [
-                          SvgPicture.asset(AppAssets.documents),
+                          SvgPicture.asset(
+                            recentFile.icon,
+                            width: 24,
+                            height: 24,
+                          ),
                           SizedBox(width: AppConstants.defaultPadding),
                           Text(recentFile.title)
                         ],
@@ -79,8 +63,6 @@ class MyFilesTable extends StatelessWidget {
   }
 }
 
-
-
 //Asssuming we get data from APi/Backend
 List<RecentFile> recentFiles = [
   RecentFile(
@@ -96,7 +78,7 @@ List<RecentFile> recentFiles = [
     size: 6.5,
   ),
   RecentFile(
-    icon: AppAssets.documents,
+    icon: AppAssets.docFile,
     title: 'Documents',
     date: '25-02-2021',
     size: 34.5,
